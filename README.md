@@ -4,10 +4,10 @@
 ## 项目清单
 | 序号 | 项目名称                                   | 技术关键词                         | 状态     |
 | ---- | ------------------------------------------ | ---------------------------------- | -------- |
-| 01   | [豆瓣读书 Top 250 采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
-| 02   | [豆瓣读书 Top 250 采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
-| 03   | [豆瓣读书 Top 250 采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
-| 04   | [豆瓣读书 Top 250 采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
+| 01   | [豆瓣读书_Top_250_采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
+| 02   | [豆瓣读书_Top_250_采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
+| 03   | [豆瓣读书_Top_250_采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
+| 04   | [豆瓣读书_Top_250_采集](01_douban_top250/) | Requests、Xpath、MySQL、模块化设计 | ✅ 已完成 |
 
 ## 技术推演路线
 静态页面抓取->动态渲染抓取->.....
@@ -25,7 +25,9 @@
 -如果你关注逆向工程，建议关注后续项目
 
 ## 联系我
--邮箱:3152057023@qq.com
+-邮箱:3152057034@qq.com
 
 -博客:待更新
 
+
+         
