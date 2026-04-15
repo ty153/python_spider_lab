@@ -44,7 +44,7 @@ CONFIG_MYSQL = {
     'database': 'douban',      # 库名可自定义
     'charset': 'utf8mb4'
 }
----
+```
 ### 3.运行项目
 
 ```bash
