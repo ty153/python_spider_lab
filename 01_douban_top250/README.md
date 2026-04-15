@@ -23,9 +23,10 @@
 ## 怎么开始
 
 ### 1.环境准备
+
 ```bash
 # 克隆项目
-git clone [https://github.com/ty153/python_spider_lab?tab=readme-ov-file]
+git clone https://github.com/ty153/python_spider_lab
 
 # 安装依赖
 pip install -r requirements.txt
@@ -33,9 +34,9 @@ pip install -r requirements.txt
 ```
 
 ### 2.配置数据库
-确保本地 MySQL 服务已启动
-
-修改 config.py 中的数据库连接信息：
+- 确保本地 MySQL 服务已启动,修改 config.py 中的数据库连接信息：
+  
+```python
 CONFIG_MYSQL = {
     'host': 'localhost',
     'user': 'root',
@@ -43,15 +44,19 @@ CONFIG_MYSQL = {
     'database': 'douban',      # 库名可自定义
     'charset': 'utf8mb4'
 }
-
+---
 ### 3.运行项目
-bash
+
+```bash
 python main.py
+```
 
 ### 4.查看结果
-sql
+
+```sql
 USE douban;
 SELECT * FROM movie_info LIMIT 10;
+```
 
 ## 结果展示
 | 运行过程                  | 数据库结果                 |
