@@ -57,12 +57,12 @@ SELECT * FROM movie_info LIMIT 10;
 | ![运行](./images/run.png) | ![数据库](./images/db.png) |
 
 ## 数据字段说明
-字段	说明	示例
-title	影片标题	肖申克的救赎
-credits	演职员信息	导演：弗兰克·德拉邦特...
-rating_count	评价人数	2638559人评价
-rating_num	评分	9.7
-con	短评/引言	希望让人自由
+- 字段	说明	示例
+- title	影片标题	肖申克的救赎
+- credits	演职员信息	导演：弗兰克·德拉邦特...
+- rating_count	评价人数	2638559人评价
+- rating_num	评分	9.7
+- con	短评/引言	希望让人自由
 
 ## 踩坑记录
 
