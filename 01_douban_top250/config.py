@@ -50,10 +50,14 @@ USER_AGENT_LIST = [
     # Windows - Opera
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/124.0.0.0",
 ]
-HEADERS = {
+def get_headers():
+    return {
     'User-Agent':random.choice(USER_AGENT_LIST),
     'referer':'https://cn.bing.com/'
 }
+
+
+
 
 CONFIG_MYSQL = {
     'host':'localhost',
@@ -64,4 +68,4 @@ CONFIG_MYSQL = {
     'charset':'utf8mb4'	
 }
 
-PAGE_NUMS = 250
+PAGE_NUMS = 11

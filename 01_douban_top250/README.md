@@ -85,6 +85,9 @@ SELECT * FROM movie_info LIMIT 10;
 
 6. f-string 引号冲突：外层用双引号、内层用单引号，避免 Python 解析错误
 
+7. ua轮换错误：使用函数`get_headers()` 实现请求每次更换ua
+
+
 ## 核心设计
 
 ### 模块化架构

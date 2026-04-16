@@ -1,6 +1,6 @@
 import requests
 import time
-from config import HEADERS
+from config import get_headers
 from lxml import etree
 import re
 import random
@@ -11,7 +11,7 @@ def fetch_one_page(page_num):
    '''
    url = f'https://movie.douban.com/top250?start={page_num*25}&filter='
 
-   res = requests.get(url,headers=HEADERS)
+   res = requests.get(url,headers=get_headers())
    data = res.content.decode()
    tree = etree.HTML(data)
    data_list=[]
