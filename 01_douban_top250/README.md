@@ -64,12 +64,13 @@ SELECT * FROM movie_info LIMIT 10;
 | ![运行](./images/run.png) | ![数据库](./images/db.png) |
 
 ## 数据字段说明
-- 字段	说明	示例
-- title	影片标题	肖申克的救赎
-- credits	演职员信息	导演：弗兰克·德拉邦特...
-- rating_count	评价人数	2638559人评价
-- rating_num	评分	9.7
-- con	短评/引言	希望让人自由
+| 字段         | 说明       | 示例                     |
+| ------------ | ---------- | ------------------------ |
+| title        | 影片标题   | 肖申克的救赎             |
+| credits      | 演职员信息 | 导演：弗兰克·德拉邦特... |
+| rating_count | 评价人数   | 2638559人评价            |
+| rating_num   | 评分       | 9.7                      |
+| con          | 短评/引言  | 希望让人自由             |
 
 ## 踩坑记录
 
@@ -85,7 +86,7 @@ SELECT * FROM movie_info LIMIT 10;
 
 6. f-string 引号冲突：外层用双引号、内层用单引号，避免 Python 解析错误
 
-7. ua轮换错误：使用函数`get_headers()` 实现请求每次更换ua
+7. UA 伪装无效：将 User-Agent 写成固定字符串导致易被识别，改为 `get_headers()` 函数每次请求随机选取
 
 
 ## 核心设计
@@ -104,6 +105,11 @@ SELECT * FROM movie_info LIMIT 10;
 ### 反爬策略
 - User-Agent 伪装，模拟浏览器请求
 - 随机请求间隔（1-3 秒），降低请求频率
+
+### 通用存储模块
+- `storage.py` 不包含任何业务字段，所有字段信息从 `config.py` 的 `TABLE_COLUMNS` 字典动态读取
+- 建表 SQL 和插入 SQL 均自动生成，换项目只需修改 `config.py`，存储层代码零改动
+- 通过 `data.get(field, '')` 安全取值，避免字段缺失导致程序崩溃
 
 ## 联系我
 - 邮箱：3152057034@qq.com

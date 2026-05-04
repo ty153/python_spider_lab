@@ -1,4 +1,5 @@
 import random
+import os
 USER_AGENT_LIST = [
     # Windows - Chrome
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
@@ -64,8 +65,23 @@ CONFIG_MYSQL = {
     'port':3306,
     'database':'dou_ban_top250',
     'user':'root',
-    'password':'chy123321CHY',
+    'password':os.getenv('MYSQL_PASSWORD', 'chy123321CHY'),
     'charset':'utf8mb4'	
+}
+
+TABLE_NAME = 'movie_info'
+
+
+'''
+    UNIQUE 的作用：告诉 MySQL,“title 这一列的值不能重复”。
+    如果你尝试插入一个已经存在的 title,MySQL 会拒绝并报错。
+'''
+TABLE_COLUMNS ={
+    'title': 'VARCHAR(255) UNIQUE',
+    'credits': 'VARCHAR(255)',
+    'rating_count': 'VARCHAR(20)',
+    'rating_num': 'VARCHAR(20)',
+    'con': 'VARCHAR(255)'
 }
 
 PAGE_NUMS = 11
