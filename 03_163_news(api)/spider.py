@@ -8,29 +8,30 @@ import json
 
 def fetch_one(url):
     '''
-    请求单个数据
+    请求单个数据 解析JSONP接口
     '''
     try:
-        res = requests.get(url,headers=get_headers())
-        # 解析出数据
-        r = re.compile(r'\((?P<name>.*)\)',re.S)
-        data_items = json.loads(re.search(r,res.text).group('name'))
+        # 发送请求
+        res = requests.get(url, headers=get_headers())
         
+        # 正则提取 JSONP 内容
+        r = re.compile(r'\((?P<name>.*)\)', re.S)
+        data_items = json.loads(re.search(r, res.text).group('name'))
+
+        # 空数据直接返回空列表
         if not data_items:
             return []
-    except Exception as e:
-        print('请求失败',e)
-        
+
+        # 解析数据
         data_list = []
-        if data_items:
-            for item in data_items:
-                title=item['title']
-                data_list.append({'title':title})
-                print('抓取到该数据',title)
-                time.sleep(random.uniform(0.1,0.3))
-            return data_list
-        else:
-            print('数据一点没抓取到,请重试')
-    
+        for item in data_items:
+            title = item['title']
+            data_list.append({'title': title})
+            print('抓取到该数据', title)
+            time.sleep(random.uniform(0.1, 0.3))
+            
+        return data_list
 
-
+    except Exception as e:
+        print('请求失败或解析失败', e)
+        return []
