@@ -112,6 +112,6 @@ SELECT * FROM movie_info LIMIT 10;
 - 通过 `data.get(field, '')` 安全取值，避免字段缺失导致程序崩溃
 
 ## 联系我
-- 邮箱：3152057034@qq.com
+- 邮箱：tycrawler@oultlook.com
 - GitHub：https://github.com/ty153/python_spider_lab
 - 博客：待更新
