@@ -52,7 +52,7 @@ def crawl_news():
 
     # 获取初始页面高度
     last_height = driver.execute_script("return document.body.scrollHeight")
-    i=0
+    i = 0
     while True:
         i+=1
         # 1. 滚动到页面底部
@@ -65,7 +65,7 @@ def crawl_news():
         try:
              # 等待按钮出现，最多等5秒
             load_more_btn = WebDriverWait(driver,5).until(
-                EC.presence_of_element_located((By.XPATH, "//*[@id='index2016_wrap']/div[3]/div[2]/div[3]/div[2]/div[5]/div/a[3]"))
+                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), '加载更多')]"))
             )
             driver.execute_script('arguments[0].click();', load_more_btn)
             print(f'第{i}次加载')
@@ -79,6 +79,7 @@ def crawl_news():
             print("页面高度不再变化，内容已加载完毕。")
             break
         last_height = new_height
+
        
 
     print("正在获取网页源代码...")
