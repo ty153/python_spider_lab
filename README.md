@@ -44,7 +44,7 @@ Requests 静态抓取（入门工程化）
 - 如果你关注逆向工程，建议关注后续项目
 
 ## 联系我
-- 邮箱:tycrawler@oultlook.com
+- 邮箱:tycrawler@outlook.com
 - 博客:待更新
 
 

@@ -119,6 +119,6 @@ SELECT COUNT(*) FROM new_titles;  -- 查看总数据量
    
 
 ## 联系我
-- 邮箱：tycrawler@oultlook.com
+- 邮箱：tycrawler@outlook.com
 - GitHub：https://github.com/ty153/python_spider_lab
 - 博客：https://juejin.cn/user/3264922756579880
