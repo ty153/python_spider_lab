@@ -1,0 +1,14 @@
+# Scrapy框架
+scrapy>=2.11.0
+
+# Selenium动态加载
+selenium>=4.15.0
+
+# 数据库
+pymysql>=1.1.0
+
+# 随机UA生成
+fake-useragent>=1.5.0
+
+# Scrapy自带但建议显式声明
+itemadapter>=0.8.0
