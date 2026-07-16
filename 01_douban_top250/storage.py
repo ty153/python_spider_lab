@@ -9,7 +9,7 @@ def database_init():
     config_without_db = CONFIG_MYSQL.copy()
     config_without_db.pop('database', None)
     try:
-        conn = pymysql.connect(**config_without_db)
+        conn = pymysql.connect(**config_without_db) #把字典的键值对转换成关键字参数传递给函数。
         cursor = conn.cursor()
         
         # 建立库如果不存在
